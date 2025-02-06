@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>الشهادات المهنية - مؤسسة الراجحي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>الشهادات المهنية - مؤسسة الراجحي</h1>
+                <div class="header-filters">
+                    <div class="filters-container">
+                        <div class="filter-group">
+                            <label for="departmentFilter">الإدارة:</label>
+                            <select id="departmentFilter" onchange="updateFilters('department')">
+                                <option value="">كل الإدارات</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="yearFilter">السنة:</label>
+                            <select id="yearFilter" onchange="updateFilters('year')">
+                                <option value="">كل السنوات</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="employeeFilter">الموظف:</label>
+                            <select id="employeeFilter" onchange="updateFilters('employee')">
+                                <option value="">كل الموظفين</option>
+                            </select>
+                        </div>
+                        <div class="search-box">
+                            <label for="searchInput">البحث:</label>
+                            <div class="search-input-container">
+                                <i class="fas fa-search search-icon"></i>
+                                <input type="text" id="searchInput" placeholder="ابحث عن موظف أو شهادة..." oninput="filterCertificates()">
+                            </div>
+                        </div>
+                        <div class="certificates-count">
+                            عدد الشهادات: <span id="certificatesCount">0</span>
+                        </div>
+                    </div>
+        </header>
+
+        <div id="dataContainer" class="certificates-grid">
+            <!-- سيتم إضافة البطاقات هنا -->
+        </div>
+        
+        <!-- Modal -->
+        <div id="modal" class="modal">
+        </div>
+
+        <!-- Fireworks Container -->
+        <div class="firework-container"></div>
+
+        <footer>
+            <div class="footer-content">
+                <p> 2025 مؤسسة الراجحي الخيرية</p>
+                <p>جميع الحقوق محفوظة</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
