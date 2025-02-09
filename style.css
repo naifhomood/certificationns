@@ -1041,7 +1041,7 @@ footer {
     }
 
     .certificates-count {
-        background: rgba(199, 129, 38, 0.6);
+        background: rgba(199, 129, 38, 4);
         padding: 0.5rem 8rem;
         border-radius: 10px;
         color: rgb(255, 255, 255);
