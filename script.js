@@ -249,16 +249,8 @@ function displayCertificates(certificates) {
                         <span>الإدارة: ${cert['Column1.department'] || 'غير محدد'}</span>
                     </div>
                     <div class="certificate-info">
-                        <i class="fas fa-envelope"></i>
-                        <span>البريد الإلكتروني: ${cert['Column1.user_id'] || 'غير محدد'}</span>
-                    </div>
-                    <div class="certificate-info">
                         <i class="fas fa-calendar-check"></i>
                         <span>تاريخ الشهادة: ${formatDate(cert['Column1.employee_courses_degree.certificate_date'])}</span>
-                    </div>
-                    <div class="certificate-info">
-                        <i class="fas fa-user-clock"></i>
-                        <span>تاريخ الانضمام: ${formatDate(cert['Column1.date_of_joining'])}</span>
                     </div>
                 </div>
             </div>
@@ -314,25 +306,11 @@ function showCertificateModal(index) {
                             <div class="info-label">الإدارة</div>
                             <div class="info-value">${certificate['Column1.department'] || '-'}</div>
                         </div>
-                        
-                        <div class="info-row">
-                            <i class="fas fa-calendar-alt"></i>
-                            <div class="info-label">البريد الإلكترون</div>
-                            <div class="info-value">${formatDate(certificate['Column1.user_id']) || '-'}</div>
-                        </div>
-                        
                         <div class="info-row">
                             <i class="fas fa-calendar-times"></i>
                             <div class="info-label">تاريخ الشهادة</div>
                             <div class="info-value">${formatDate(certificate['Column1.employee_courses_degree.certificate_date']) || '-'}</div>
                         </div>
-                        
-                        <div class="info-row">
-                            <i class="fas fa-university"></i>
-                            <div class="info-label">تاريخ الانضمام</div>
-                            <div class="info-value">${certificate['Column1.date_of_joining'] || '-'}</div>
-                        </div>
-
                     </div>
                 </div>
             </div>
