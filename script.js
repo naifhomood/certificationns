@@ -3,14 +3,10 @@ let currentCertificateIndex = 0;
 let filteredCertificates = [];
 
 async function fetchGoogleSheet() {
-    const spreadsheetId = "1Pz2qNz0qfrYa5oI3eNCqPkiKTjtpVNvFWDV8F5y1trA";
-    const sheetName = "Sheet1";
-    const apiKey = "AIzaSyCrWNd7PF8Cy5TIq7QAltyt4VV4p9_7kLE";
-
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+    const appsScriptUrl = "https://script.google.com/macros/s/AKfycbxkm1aJ0u4RYW3XaezIHnmT4Ozk-_5xjQvsHzzhKVrWSHKQV4Iv6CXzFygJC9SPjMPeiw/exec";
 
     try {
-        const response = await fetch(url);
+        const response = await fetch(appsScriptUrl);
         const data = await response.json();
 
         if (!data.values || data.values.length < 2) {
