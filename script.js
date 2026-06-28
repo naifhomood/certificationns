@@ -3,7 +3,7 @@ let currentCertificateIndex = 0;
 let filteredCertificates = [];
 
 async function fetchGoogleSheet() {
-    const appsScriptUrl = "https://script.google.com/macros/s/AKfycbz0JyZaGpmkGc3Lo9qANJyy5MHEsN3NqoCDirSO8VqSrKD9165oW6p7WY1Si3hkovQ3_Q/exec";
+    const appsScriptUrl = "https://script.google.com/macros/s/AKfycby55QmEKr9lCiKpO6BFxiPDiycFeNFO9HYymb9GHzYe3KPHHAlzFSeCGUled1qsg_GE/exec";
 
     try {
         const response = await fetch(appsScriptUrl);
